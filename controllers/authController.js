@@ -22,6 +22,25 @@ exports.postSignIn = async (req, res, next) => {
     console.log(error);
   }
 };
-exports.postLogIn = (req, res, next) => {};
+exports.postLogIn = async (req, res, next) => {
+  let { email, password } = req.body;
+  try {
+    let user = await User.findOne({ email });
+
+    if (!user) {
+      return res.status(401).send("Invalid email or password");
+    }
+    let isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+      return res.status(401).send("Invalid email or password");
+    }
+
+   
+    res.send("Logged in successfully");
+  } catch (error) {
+    console.log(error);
+    next(error);
+  }
+};
 exports.getLogIn = (req, res, next) => {};
 exports.logOut = (req, res, next) => {};
