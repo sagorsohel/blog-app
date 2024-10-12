@@ -13,6 +13,8 @@ res.send(`Welcome`)
 })
 
 
+console.log(app.get('env'))
+
 mongoose
   .connect(`mongodb+srv://sohel:9dB4cBORK9SaqcYa@cluster0.plk0vgv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
   .then(() => {

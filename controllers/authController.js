@@ -5,7 +5,7 @@ exports.getSignIn = (req, res, next) => {
   res.send(`<h1>Hey this is auth page</h1>`);
 };
 exports.postSignIn = async (req, res, next) => {
-  console.log(req.body);
+  
   let { name, email, password } = req.body;
 
   try {
