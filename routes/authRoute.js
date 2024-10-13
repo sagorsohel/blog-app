@@ -8,7 +8,7 @@ const {
   logOut,
 } = require("../controllers/authController");
 const User = require("../models/User");
-
+const upload =require('../middleware/Upload')
 const signUpValidation = [
   body("name")
     .isLength({ min: 2, max: 15 })
@@ -34,7 +34,7 @@ authRouter.get("/login", getLogIn);
 
 authRouter.post("/login", postLogIn);
 
-authRouter.post("/signin", signUpValidation, postSignIn);
+authRouter.post("/signin", upload.single('avatar'), postSignIn);
 
 authRouter.get("/signin", getSignIn);
 
