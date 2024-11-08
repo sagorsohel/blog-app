@@ -38,6 +38,6 @@ authRouter.post("/signin", upload.single('avatar'), postSignIn);
 
 authRouter.get("/signin", getSignIn);
 
-// authRouter.get("/logout", logOut);
+authRouter.get("/logout", logOut);
 
 module.exports = authRouter;
