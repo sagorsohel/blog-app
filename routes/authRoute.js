@@ -32,7 +32,7 @@ const signUpValidation = [
 
 authRouter.get("/login", getLogIn);
 
-// authRouter.post("/login", postLogIn);
+authRouter.post("/login", postLogIn);
 
 authRouter.post("/signin", upload.single('avatar'), postSignIn);
 
