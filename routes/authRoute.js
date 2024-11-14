@@ -8,7 +8,7 @@ const {
   logOut,
 } = require("../controllers/authController");
 const User = require("../models/User");
-// const upload =require('../middleware/Upload')
+const upload =require('../middleware/Upload')
 const signUpValidation = [
   body("name")
     .isLength({ min: 2, max: 15 })
