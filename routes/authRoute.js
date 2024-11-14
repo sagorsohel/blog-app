@@ -25,6 +25,7 @@ const signUpValidation = [
       const existingUser = await User.findByEmail({email});
       if (existingUser) {
         // Will use the below as the error message
+        throw new Error('A user already exists with this e-mail address');
       }
     })
 ];
