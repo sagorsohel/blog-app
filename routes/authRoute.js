@@ -12,7 +12,7 @@ const upload =require('../middleware/Upload')
 const signUpValidation = [
   body("name")
     .isLength({ min: 2, max: 15 })
-    .withMessage("Name must be between 2 and 15 characters long")
+    // .withMessage("Name must be between 2 and 15 characters long")
     .custom(async (name) => {
       let user = await User.findOne({ name });
       if (user) {
