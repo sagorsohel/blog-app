@@ -20,7 +20,7 @@ const signUpValidation = [
       }
     }),
     body('email')
-    .isEmail()
+
     .custom(async email => {
       const existingUser = await User.findByEmail({email});
       if (existingUser) {
