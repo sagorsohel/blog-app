@@ -12,7 +12,7 @@ const storage = multer.diskStorage({
     cb(null, uniqueName);
   },
 });
-
+afdf
 // Initialize multer with the correct storage value.
 fdsfdsf
 const upload = multer({
