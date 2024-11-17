@@ -14,8 +14,7 @@ const storage = multer.diskStorage({
 });
 
 // Initialize multer with the correct storage value.
-fafas
-sfcsdfhk
+
 const upload = multer({
   storage: storage, // Call the function, not pass it directly
   limits: {
