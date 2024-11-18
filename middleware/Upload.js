@@ -13,7 +13,6 @@ const storage = multer.diskStorage({
   },
 });
 
-fdfsdfsaf
 // Initialize multer with the correct storage value.
 const upload = multer({
   storage: storage, // Call the function, not pass it directly
