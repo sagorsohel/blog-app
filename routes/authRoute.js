@@ -16,7 +16,7 @@ const signUpValidation = [
     .custom(async (name) => {
       let user = await User.findOne({ name });
       if (user) {
-        throw new Error("Name  exists");
+        throw new Error("Name  ");
       }
     }),
     body('email')
